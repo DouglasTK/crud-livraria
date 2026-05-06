@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Buscar Livro por ID</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            background-color: #f4f6f8;
+            text-align: center;
+            padding-top: 60px;
+        }
+
+        input {
+            padding: 10px;
+            width: 300px;
+            margin: 10px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background: #8e44ad;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        table {
+            margin: auto;
+            margin-top: 30px;
+            border-collapse: collapse;
+            width: 60%;
+            background: white;
+        }
+
+        th, td {
+            padding: 10px;
+            border: 1px solid #ddd;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+<h1>🔍 Buscar Livro por ID</h1>
+
+
+<form action="/livros/buscar" method="get">
+    <input type="text" name="id" placeholder="Digite o ID do livro" required>
+    <button type="submit">Buscar</button>
+</form>
+
+<br>
+
+
+<div th:if="${livro != null}">
+
+    <table>
+        <tr>
+            <th>Nome</th>
+            <th>Autor</th>
+            <th>Status</th>
+        </tr>
+
+        <tr>
+            <td th:text="${livro.nomeLivro}"></td>
+            <td th:text="${livro.autor}"></td>
+            <td th:text="${livro.status}"></td>
+        </tr>
+
+    </table>
+
+</div>
+
+</body>
+</html>

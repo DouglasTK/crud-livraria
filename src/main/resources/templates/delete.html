@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Deletar Livro</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            background-color: #f4f6f8;
+            text-align: center;
+            padding-top: 60px;
+        }
+
+        form {
+            background: white;
+            width: 400px;
+            margin: auto;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 2px 8px rgba(0,0,0,0.1);
+        }
+
+        input {
+            width: 90%;
+            padding: 10px;
+            margin: 10px 0;
+        }
+
+        button {
+            padding: 10px 20px;
+            background: #c0392b;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        .voltar {
+            display: block;
+            margin-top: 10px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+<h1>🗑 Deletar Livro</h1>
+
+
+<form onsubmit="return confirmarDelecao()" action="/livros/delete" method="post">
+
+    <input type="text" name="id" placeholder="Digite o ID do livro" required>
+
+    <button type="submit">Deletar</button>
+
+</form>
+
+<a class="voltar" href="/home">⬅ Voltar</a>
+
+<script>
+    function confirmarDelecao() {
+        return confirm("Tem certeza que deseja deletar este livro?");
+    }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Biblioteca - Menu</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            background-color: #f4f6f8;
+            text-align: center;
+            padding-top: 60px;
+        }
+
+        h1 {
+            color: #2c3e50;
+            margin-bottom: 40px;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            width: 60%;
+            margin: auto;
+        }
+
+        .card {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .btn {
+            display: block;
+            margin-top: 10px;
+            padding: 10px;
+            text-decoration: none;
+            color: white;
+            border-radius: 5px;
+        }
+
+        .listar { background: #2c3e50; }
+        .cadastrar { background: #27ae60; }
+        .buscar { background: #8e44ad; }
+        .atualizar { background: #f39c12; }
+        .deletar { background: #c0392b; }
+
+    </style>
+
+</head>
+
+<body>
+
+<h1>📚 Sistema de Biblioteca</h1>
+
+<div class="container">
+
+    <div class="card">
+        <h3>Cadastrar Livro</h3>
+        <a class="btn cadastrar" href="/cadastro">➕ Acessar</a>
+    </div>
+
+    <div class="card">
+        <h3>Listar Todos</h3>
+        <a class="btn listar" href="/home">📖 Acessar</a>
+    </div>
+
+    <div class="card">
+        <h3>Buscar por ID</h3>
+        <a class="btn buscar" href="/buscar">🔍 Acessar</a>
+    </div>
+
+    <div class="card">
+        <h3>Atualizar Livro</h3>
+        <a class="btn atualizar" href="/atualizar">✏ Acessar</a>
+    </div>
+
+    <div class="card">
+        <h3>Deletar Livro</h3>
+        <a class="btn deletar" href="/deletar">🗑 Acessar</a>
+    </div>
+
+</div>
+
+</body>
+</html>

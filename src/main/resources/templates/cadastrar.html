@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Cadastrar Livro</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            background-color: #f4f6f8;
+            text-align: center;
+            padding-top: 60px;
+        }
+
+        form {
+            background: white;
+            width: 400px;
+            margin: auto;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 2px 8px rgba(0,0,0,0.1);
+        }
+
+        input, select {
+            width: 90%;
+            padding: 10px;
+            margin: 10px 0;
+        }
+
+        button {
+            padding: 10px 20px;
+            background: #27ae60;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        a {
+            display: block;
+            margin-top: 10px;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+<h1>➕ Cadastrar Livro</h1>
+
+
+<form action="/livros/add" method="post">
+
+    <input type="text" name="nomeLivro" placeholder="Nome do livro" required>
+
+    <input type="text" name="autor" placeholder="Autor" required>
+
+    <select name="status">
+        <option value="DISPONIVEL">Disponível</option>
+        <option value="INDISPONIVEL">Indisponível</option>
+    </select>
+
+    <button type="submit">Salvar</button>
+
+</form>
+
+<a href="/home">⬅ Voltar</a>
+
+</body>
+</html>

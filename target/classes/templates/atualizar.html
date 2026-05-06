@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Atualizar Livro</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            background-color: #f4f6f8;
+            text-align: center;
+            padding-top: 50px;
+        }
+
+        form {
+            background: white;
+            width: 400px;
+            margin: auto;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 2px 8px rgba(0,0,0,0.1);
+        }
+
+        input, select {
+            width: 90%;
+            padding: 10px;
+            margin: 10px 0;
+        }
+
+        button {
+            padding: 10px 20px;
+            background: #f39c12;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        a {
+            display: block;
+            margin-top: 10px;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+<h1>✏ Atualizar Livro</h1>
+
+<!-- IMPORTANTE: esse endpoint precisa existir no controller -->
+<form action="/livros/update" method="post">
+
+    <input type="text" name="id" placeholder="ID do livro (obrigatório)" required>
+
+    <input type="text" name="nomeLivro" placeholder="Novo nome">
+
+    <input type="text" name="autor" placeholder="Novo autor">
+
+    <select name="status">
+        <option value="DISPONIVEL">Disponível</option>
+        <option value="INDISPONIVEL">Indisponível</option>
+    </select>
+
+    <button type="submit">Atualizar</button>
+
+</form>
+
+<a href="/home">⬅ Voltar</a>
+
+</body>
+</html>
