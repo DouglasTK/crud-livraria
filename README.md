@@ -25,6 +25,7 @@ Maven
 MongoDB
 HTML5
 CSS3
+
 📂 Estrutura do Projeto
 src/main/java/
 │
@@ -53,6 +54,7 @@ src/main/resources/
 │   └── delete.html
 │
 └── application.properties
+
 🧱 Arquitetura Utilizada
 
 O projeto foi desenvolvido utilizando o padrão MVC (Model-View-Controller) com separação em camadas:
@@ -66,6 +68,7 @@ View → Interfaces HTML utilizando Thymeleaf
 Fluxo da aplicação:
 
 Usuário → Controller → Service → Repository → MongoDB
+
 ⚙️ Configuração do MongoDB
 
 Certifique-se de possuir o MongoDB instalado e em execução localmente.
@@ -76,6 +79,7 @@ spring.application.name=crud-livraria
 spring.data.mongodb.uri=mongodb://localhost:27017/livraria
 spring.thymeleaf.cache=false
 server.port=8080
+
 ▶️ Como Executar o Projeto
 1. Clonar o repositório
 git clone https://github.com/DouglasTK/crud-livraria.git
