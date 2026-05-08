@@ -1,4 +1,5 @@
 Sistema de Controle de Biblioteca - CRUD Livraria
+
 📚 Sobre o Projeto
 
 Este projeto consiste em um Sistema de Controle de Biblioteca desenvolvido utilizando Java Web com Spring Boot, MongoDB e Thymeleaf.
@@ -15,6 +16,7 @@ Thymeleaf
 Padrão em camadas
 APIs REST
 Persistência de dados
+
 🛠 Tecnologias Utilizadas
 Java 17
 Spring Boot
@@ -83,27 +85,23 @@ server.port=8080
 ▶️ Como Executar o Projeto
 1. Clonar o repositório
 git clone https://github.com/DouglasTK/crud-livraria.git
+
 2. Acessar a pasta do projeto
 cd crud-livraria
-3. Executar o MongoDB
 
+3. Executar o MongoDB
 Inicie o serviço do MongoDB localmente.
 
 4. Executar o projeto
-
 Utilizando Maven:
-
 mvn spring-boot:run
-
-Ou execute diretamente pela IDE.
+Ou execute diretamente pela IDE
 
 🌐 Acesso da Aplicação
-
 Após iniciar o projeto:
-
 http://localhost:8080
-📌 Funcionalidades
 
+📌 Funcionalidades
 ✅ Cadastro de livros
 ✅ Listagem de livros
 ✅ Atualização de livros
@@ -115,31 +113,25 @@ http://localhost:8080
 🔗 Endpoints da API
 Listar livros
 GET /livros
+
 Buscar livro por ID
 GET /livros/{id}
+
 Cadastrar livro
 POST /livros/add
+
 Atualizar livro
 PUT /livros/update
+
 Deletar livro
 DELETE /livros/delete/{id}
+
 📖 Entidade Principal
 LivroEntity
 
 A entidade Livro possui os seguintes atributos:
-
 id
 nomeLivro
 autor
 status
-📐 Diagramas UML
 
-O projeto possui:
-
-Diagrama de Classes
-Diagrama de Sequência
-
-Utilizados para representar:
-
-Estrutura das classes
-Fluxo de funcionamento do sistema
